@@ -4,12 +4,13 @@
 
 ## Installering
 Last ned Visual Studio Code.
+
 macOS (Homebrew):
 ```sh
 brew install --cask visual-studio-code
 ```
 Windows:
-Last ned fra [lenken her](https://code.visualstudio.com/).
+Last ned fra [code.visualstudio.com](https://code.visualstudio.com/).
 
 Arch Linux:
 ```sh
