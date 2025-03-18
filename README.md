@@ -3,5 +3,5 @@
 - [Installering](#installation)
 
 ## Installering
-``sh
+```sh
 sudo pacman -Syu
