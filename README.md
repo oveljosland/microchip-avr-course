@@ -3,7 +3,7 @@
 - [Installering](#installation)
 
 ## Installering
-Last ned Visual Studio Code.
+Dette kurset vil bruke Visual Studio Code med MPLABX Extension. Last ned Visual Studio Code.
 
 Windows:
 
@@ -21,3 +21,5 @@ Arch Linux:
 ```sh
 sudo pacman -S code
 ```
+
+
