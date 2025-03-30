@@ -84,6 +84,7 @@ disassembly/
 
 # macOS
 .DS_Store
+**/.DS_Store
 
 # Notes
 notes.txt
