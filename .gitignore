@@ -82,5 +82,8 @@ nbproject/Makefile-*
 disassembly/
 .generated_files/
 
+# macOS
+.DS_Store
+
 # Notes
 notes.txt
