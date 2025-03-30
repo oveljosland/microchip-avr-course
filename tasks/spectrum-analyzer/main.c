@@ -31,7 +31,10 @@
 /* --- constants --- */
 #define N 8
 #define NFFT 1<<N
-#define T_SAMPLE 125 /* us */
+
+/* try changing the sampling period to see the effects of aliasing */
+#define T_SAMPLE 125 /* microseconds */
+
 
 /* --- variables for signal processing --- */
 volatile uint16_t x = 0;
@@ -88,6 +91,7 @@ int main(void)
 
     volatile uint32_t pwr;
     volatile uint8_t pwr_db;
+    volatile uint8_t pwr_bs;
 
 
     while (1) {
@@ -100,11 +104,11 @@ int main(void)
 
         for (uint8_t n = 0; n < out; n++) {     
 
-            pwr = cpx_out[n].r * cpx_out[n].r + cpx_out[n].i * cpx_out[n].i;
-            pwr = sqrt(pwr);
+            pwr = sqrt(cpx_out[n].r * cpx_out[n].r + cpx_out[n].i * cpx_out[n].i);
             pwr_db = (uint8_t)(20*log10f(pwr));
+            pwr_bs = (uint8_t) pwr >> 2;
 
-            SSD1306_DrawLine(MAX_X - n, MAX_X - n, 0, pwr_db);
+            SSD1306_DrawLine(MAX_X - n, MAX_X - n, 0, pwr_bs);
         }
         SSD1306_UpdateScreen(SSD1306_ADDR);
     }
