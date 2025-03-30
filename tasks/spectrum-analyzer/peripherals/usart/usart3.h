@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdlib.h>
-#include "../clock/clkctrl.h"
+#include "../clk/clk.h"
 
 /* Normal Mode, Baud register value */
 #define USART3_BAUD_RATE(BAUD_RATE) (((float)F_CPU * 64 / (16 * (float)BAUD_RATE)) + 0.5)

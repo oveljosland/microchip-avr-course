@@ -1,5 +1,5 @@
 /** 
- * @file clkctrl.h
+ * @file clk.h
  * @author Ove Ljosland
  * @date 2025-03-19
 */
@@ -10,7 +10,7 @@
 #include <xc.h>
 #include <avr/cpufunc.h>
 
-void clkctrl_init(void);
+void clk_init(void);
 #ifndef F_CPU
 #define F_CPU 24000000UL
 #endif

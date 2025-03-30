@@ -1,8 +1,8 @@
-#include "../clock/clkctrl.h"
+#include "../clk/clk.h"
 
 
 /* clkconfig: initializes main clock frequency */
-void clkctrl_init(void)
+void clk_init(void)
 {
    /* set OSCHF clock to 24 MHz */
    ccp_write_io ((uint8_t *) & CLKCTRL.OSCHFCTRLA,

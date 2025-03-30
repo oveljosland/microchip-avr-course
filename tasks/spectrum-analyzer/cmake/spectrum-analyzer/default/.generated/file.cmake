@@ -12,7 +12,7 @@ set(spectrum_analyzer_default_default_XC8_FILE_TYPE_compile
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../filter/kiss_fftr.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../main.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/adc/adc.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/clock/clkctrl.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/clk/clk.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/dac/dac.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/data_streamer/data_streamer.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/i2c/i2c.c"
