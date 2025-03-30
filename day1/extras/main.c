@@ -9,6 +9,8 @@
 /* TODO: include the necessary header files */
 /* TODO: define pins or use bitmasks */
 
+/* tip: try using the LED ring on the Explorer board */
+
 /* no answer key for this one :) */
 
 /* main: use buttons on the Explorer-board to control LEDs */
@@ -18,8 +20,7 @@ int main(void)
     /* hint: do you need to configure anything else? */
 
     while (1) {
-        /* TODO: check if buttons are pressed */
-        /* TODO: toggle LEDs */
+        /* TODO: do something with the LEDs */
     }
     return 0;
 };
