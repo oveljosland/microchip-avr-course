@@ -3,7 +3,21 @@ set(spectrum_analyzer_default_default_XC8_FILE_TYPE_assemble)
 set_source_files_properties(${spectrum_analyzer_default_default_XC8_FILE_TYPE_assemble} PROPERTIES LANGUAGE ASM)
 set(spectrum_analyzer_default_default_XC8_FILE_TYPE_assemblePreprocess)
 set_source_files_properties(${spectrum_analyzer_default_default_XC8_FILE_TYPE_assemblePreprocess} PROPERTIES LANGUAGE ASM)
-set(spectrum_analyzer_default_default_XC8_FILE_TYPE_compile "${CMAKE_CURRENT_SOURCE_DIR}/../../../main.c")
+set(spectrum_analyzer_default_default_XC8_FILE_TYPE_compile
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../display/ssd1306.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../filter/kfc.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../filter/kiss_fft.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../filter/kiss_fftnd.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../filter/kiss_fftndr.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../filter/kiss_fftr.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../main.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/adc/adc.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/clock/clkctrl.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/dac/dac.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/data_streamer/data_streamer.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/i2c/i2c.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/tca/tca.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/usart/usart3.c")
 set_source_files_properties(${spectrum_analyzer_default_default_XC8_FILE_TYPE_compile} PROPERTIES LANGUAGE C)
 set(spectrum_analyzer_default_default_XC8_FILE_TYPE_link)
 
