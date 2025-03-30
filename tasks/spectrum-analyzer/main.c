@@ -79,10 +79,7 @@ int main(void)
     dac_init();
     USART3_Initialize();
 
-    //uint8_t retval = 0;
-    //retval = SSD1306_Init(SSD1306_ADDR);
-    SSD1306_ClearScreen();
-    SSD1306_UpdateScreen(SSD1306_ADDR);  
+    uint8_t retval = SSD1306_Init(SSD1306_ADDR);
 
     volatile int out = (NFFT>>1)+1;
 
@@ -106,9 +103,7 @@ int main(void)
             pwr = cpx_out[n].r * cpx_out[n].r + cpx_out[n].i * cpx_out[n].i;
             pwr = sqrt(pwr);
             pwr_db = (uint8_t)(20*log10f(pwr));
-            
-            /* uncomment if you need to stream variables to Data Visalizer */
-            //variableWrite_SendFrame(watch_real, watch_imag, cnt, pwr_db);
+
             SSD1306_DrawLine(MAX_X - n, MAX_X - n, 0, pwr_db);
         }
         SSD1306_UpdateScreen(SSD1306_ADDR);
