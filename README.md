@@ -1,25 +1,18 @@
-# Kurs i AVR-programmering med Microchip
-## Innhold
-- [Installering](#installation)
+# Welcome to the AVR-programming course!
+## Contents
+- [Prerequisites](#prerequisites)
 
-## Installering
-Dette kurset vil bruke Visual Studio Code med MPLABX Extension. Last ned Visual Studio Code.
+## Prerequisite
+This course will use Visual Studio Code with the MPLABX Extension. Install Visual Studio Code or one of its variations if you do not have it installed already.
 
 Windows:
-
-Last ned fra [code.visualstudio.com](https://code.visualstudio.com/).
-
+Visual Studio Code [code.visualstudio.com](https://code.visualstudio.com/).
 
 macOS (Homebrew):
-
 ```sh
 brew install --cask visual-studio-code
 ```
 
-Arch Linux:
-
-```sh
-sudo pacman -S code
-```
-
-
+Linux:
+Download from Visual Studio Code [code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux),
+or use your distributions package manager.
