@@ -87,9 +87,9 @@ disassembly/
 **/.DS_Store
 
 # Visual Studio Code
-.vscode/*
-!.vscode/*.mplab.json
-
+**/.vscode/*
+!**/.vscode/*.mplab.json
+**/.vscode/settings.json
 
 # Notes
 notes.txt
