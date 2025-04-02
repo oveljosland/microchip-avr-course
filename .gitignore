@@ -86,5 +86,10 @@ disassembly/
 .DS_Store
 **/.DS_Store
 
+# Visual Studio Code
+.vscode/*
+!.vscode/*.mplab.json
+
+
 # Notes
 notes.txt
