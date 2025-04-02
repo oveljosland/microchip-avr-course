@@ -18,6 +18,7 @@ If you use Homebrew, install Visual Studio Code using:
 ```sh
 brew install --cask visual-studio-code
 ```
+Alternatively, you can download VS Code from the [official website](https://code.visualstudio.com).
 
 ### Linux
 You can download VS Code from the [official website](https://code.visualstudio.com/docs/setup/linux) or install it using your distribution’s package manager.
