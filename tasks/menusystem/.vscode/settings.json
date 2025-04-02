@@ -1,5 +1,0 @@
-{
-    "mplab.clangd.arguments": [
-        "--compile-commands-dir=${cwd}Users/oveljosland/Projects/microchip-avr-course/day3/menusystem/_build/menusystem/default"
-    ]
-}
