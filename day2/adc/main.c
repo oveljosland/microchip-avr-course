@@ -2,9 +2,15 @@
  * @file main.c
  * @author oveljosland
  * @date 2025-04-02
- * @brief Main function 
+ * @brief initialize and read values from the adc 
  */
-int main(){
+
+#include "peripherals/adc.h"
+
+
+int main(void)
+{
+    /* initialize adc0 */
 
     // Add your code here and press Ctrl + Shift + B to build
 
