@@ -25,11 +25,6 @@ Alternatively, you can download VS Code from the [official website](https://code
 ### Linux
 You can download VS Code from the [official website](https://code.visualstudio.com/docs/setup/linux) or install it using your distribution’s package manager.
 
-For Arch Linux:
-```sh
-sudo pacman -S code
-```
-
 ## 📥 Cloning the Course
 To get started, clone this repository using Git:
 ```sh
