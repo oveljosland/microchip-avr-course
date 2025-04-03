@@ -9,7 +9,7 @@ Welcome to the AVR Programming Course! This repository contains materials and ex
 - [Pinout diagram](#pinout-diagram)
 - [License](#license)
 
-## 🚀 Prerequisites
+## 🧰 Prerequisites
 This course requires Visual Studio Code with the MPLABX Extension. If you haven't installed Visual Studio Code yet, follow the instructions below based on your operating system.
 
 ### Windows
@@ -47,7 +47,7 @@ Alternatively, you can download the repository as a `.ZIP` file and extract it t
    - **Windows/Linux:** `Ctrl + F5`
    - **macOS:** `Control + F5`
   
-## Useful links
+## 🧐 Useful links
 ### Curiosity Nano 
 - [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/AVR128DB28-32-48-64-DataSheet-DS40002247.pdf)
 - [Hardware User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/AVR128DB48-Curiosity-Nano-HW-UserG-DS50003037A.pdf)
@@ -56,12 +56,10 @@ Alternatively, you can download the repository as a `.ZIP` file and extract it t
 ### Curiosity Nano Explorer
 - [User Guide](https://onlinedocs.microchip.com/oxy/GUID-4910ECB5-7AD0-4572-B070-CCA2E253F3CB-en-US-1/index.html)
 
-## Pinout
+##  Pinout
 ![avrpinout](img/pinout.png "Curiosity Nano Explorer Pinout")
 
 
 ## 📄 License
 This course material is open-source and available under the MIT License.
-
-Good luck! 🚀
 
