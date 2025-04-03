@@ -99,14 +99,9 @@ int main(void)
     SSD1306_UpdateScreen(SSD1306_ADDR);
     _delay_ms(10000);
 
- 
     while (1) {
         SSD1306_ClearScreen();
         grid_draw();
-        SSD1306_SetPosition(65, 0);
-        SSD1306_DrawString("Test");
-        SSD1306_SetPosition(100, 0);
-        SSD1306_DrawChar('T');
         SSD1306_UpdateScreen(SSD1306_ADDR);
         grid_update();
     }
