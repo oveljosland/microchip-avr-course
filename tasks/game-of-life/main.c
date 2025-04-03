@@ -26,7 +26,24 @@ void grid_init()
         }
     }
 }
- 
+
+void grid_draw()
+{
+    SSD1306_ClearScreen();
+    for (uint8_t y = 0; y < GRID_SIZE; y++) {
+        for (uint8_t x = 0; x < GRID_SIZE; x++) {
+            if (grid[y][x]) {
+                for (uint8_t dy = 0; dy < CELL_SIZE; dy++) {
+                    for (uint8_t dx = 0; dx < CELL_SIZE; dx++) {
+                        SSD1306_DrawPixel((x << N) + dx, (y << N) + dy);
+                    }
+                }
+            }
+        }
+    }
+    SSD1306_UpdateScreen(SSD1306_ADDR);
+}
+
 int main(void)
 {
     SSD1306_Init(SSD1306_ADDR);
