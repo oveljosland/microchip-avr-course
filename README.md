@@ -5,6 +5,8 @@ Welcome to the AVR Programming Course! This repository contains materials and ex
 - [Prerequisites](#prerequisites)
 - [Cloning the Course](#cloning-the-course)
 - [Building and Running Your First Task](#building-and-running-your-first-task)
+- [Useful links](#useful-links)
+- [Pinout diagram](#pinout-diagram)
 - [License](#license)
 
 ## 🚀 Prerequisites
@@ -44,6 +46,19 @@ Alternatively, you can download the repository as a `.ZIP` file and extract it t
 4. Run the program using:
    - **Windows/Linux:** `Ctrl + F5`
    - **macOS:** `Control + F5`
+  
+## Useful links
+- Curiosity Nano 
+-- [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/AVR128DB28-32-48-64-DataSheet-DS40002247.pdf)
+-- [Hardware User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/AVR128DB48-Curiosity-Nano-HW-UserG-DS50003037A.pdf)
+-- [TB3245 - Using 12-Bit ADC for Conversions, Accumulation, and Triggering Events](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ApplicationNotes/ApplicationNotes/12BitADC-Conv-Accumulation-Triggering-Events-DS90003245D.pdf)
+-- [TB3235 - Using 10-Bit DAC for Generating Analog Signals](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ApplicationNotes/ApplicationNotes/Using-10Bit-DAC-for-Generating-Analog-Signals-DS90003235C.pdf)
+- Curiosity Nano Explorer
+-- [User Guide](https://onlinedocs.microchip.com/oxy/GUID-4910ECB5-7AD0-4572-B070-CCA2E253F3CB-en-US-1/index.html)
+
+## Pinout
+![avrpinout](img/pinout.png "Curiosity Nano Explorer Pinout")
+
 
 ## 📄 License
 This course material is open-source and available under the MIT License.
