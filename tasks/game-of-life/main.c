@@ -44,6 +44,45 @@ void grid_draw()
     SSD1306_UpdateScreen(SSD1306_ADDR);
 }
 
+uint8_t count_neighbors(uint8_t x, uint8_t y) {
+    int8_t dx, dy;
+    uint8_t n = 0;
+    for (dy = -1; dy <= 1; dy++) {
+        for (dx = -1; dx <= 1; dx++) {
+            if (dx == 0 && dy == 0) continue;
+            int8_t nx = x + dx;
+            int8_t ny = y + dy;
+            if (nx >= 0 && nx < GRID_SIZE && ny >= 0 && ny < GRID_SIZE) {
+                n += grid[ny][nx];
+            }
+        }
+    }
+    return n;
+}
+
+void update_grid() {
+    for (uint8_t y = 0; y < GRID_SIZE; y++) {
+        for (uint8_t x = 0; x < GRID_SIZE; x++) {
+            uint8_t neighbors = count_neighbors(x, y);
+            if (grid[y][x] && (neighbors < 2 || neighbors > 3)) {
+                next[y][x] = 0; /* die */
+            } else if (!grid[y][x] && neighbors == 3) {
+                next[y][x] = 1; /* become alive */
+            } else {
+                next[y][x] = grid[y][x]; /* stay the same */
+            }
+        }
+    }
+    
+    for (uint8_t y = 0; y < GRID_SIZE; y++) {
+        for (uint8_t x = 0; x < GRID_SIZE; x++) {
+            grid[y][x] = next[y][x];
+            next[y][x] = 0; /* clear grid */
+        }
+    }
+}
+
+
 int main(void)
 {
     SSD1306_Init(SSD1306_ADDR);
