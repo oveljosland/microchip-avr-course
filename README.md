@@ -7,7 +7,7 @@ Welcome to the AVR Programming Course! This repository contains materials and ex
 - [Building and Running Your First Task](#building-and-running-your-first-task)
 - [Useful links](#useful-links)
 - [Pinout diagram](#pinout-diagram)
-- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## 🧰 Prerequisites
 This course requires Visual Studio Code with the MPLABX Extension. If you haven't installed Visual Studio Code yet, follow the instructions below based on your operating system.
@@ -60,6 +60,11 @@ Alternatively, you can download the repository as a `.ZIP` file and extract it t
 ![avrpinout](img/pinout.png "Curiosity Nano Explorer Pinout")
 
 
-## 📄 License
-This course material is open-source and available under the MIT License.
+## Acknowledgments
+This project uses the following open-source libraries:
+
+- [SSD1306 OLED Driver](https://github.com/marianhrinko/ssd1306) by **Marián Hrinko** – Licensed under the **MIT License**.
+- [kissFFT](https://github.com/mborgerding/kissfft) by **Mark Borgerding** – Licensed under the **BSD-3-Clause License**.
+
+For more details, see the [`THIRD_PARTY_LICENSES`](THIRD_PARTY_LICENSES) file.
 
