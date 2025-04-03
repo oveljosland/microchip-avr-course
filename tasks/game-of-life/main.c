@@ -18,7 +18,7 @@
 uint8_t grid[GRID_SIZE][GRID_SIZE];
 uint8_t next[GRID_SIZE][GRID_SIZE];
  
-void grid_init()
+void grid_init(void)
 {
     for (uint8_t y = 0; y < GRID_SIZE; y++) {
         for (uint8_t x = 0; x < GRID_SIZE; x++) {
@@ -27,7 +27,7 @@ void grid_init()
     }
 }
 
-void grid_draw()
+void grid_draw(void)
 {
     SSD1306_ClearScreen();
     for (uint8_t y = 0; y < GRID_SIZE; y++) {
@@ -60,17 +60,16 @@ uint8_t count_neighbors(uint8_t x, uint8_t y) {
     return n;
 }
 
-void update_grid() {
+void grid_update(void) {
     for (uint8_t y = 0; y < GRID_SIZE; y++) {
         for (uint8_t x = 0; x < GRID_SIZE; x++) {
             uint8_t neighbors = count_neighbors(x, y);
-            if (grid[y][x] && (neighbors < 2 || neighbors > 3)) {
+            if (grid[y][x] && (neighbors < 2 || neighbors > 3))
                 next[y][x] = 0; /* die */
-            } else if (!grid[y][x] && neighbors == 3) {
+            else if (!grid[y][x] && neighbors == 3)
                 next[y][x] = 1; /* become alive */
-            } else {
+            else
                 next[y][x] = grid[y][x]; /* stay the same */
-            }
         }
     }
     
@@ -90,6 +89,8 @@ int main(void)
     grid_init();
  
     while (1) {
+        grid_draw();
+        grid_update();
        _delay_ms(50);
     }
 }
