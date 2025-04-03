@@ -1,6 +1,6 @@
 # The following functions contains all the flags passed to the different build stages.
 
-set(PACK_REPO_PATH "/Users/oveljosland/.mchp_packs" CACHE PATH "Path to the root of a pack repository.")
+set(PACK_REPO_PATH "/home/ove/.mchp_packs" CACHE PATH "Path to the root of a pack repository.")
 
 function(adc_default_default_XC8_assemble_rule target)
     set(options

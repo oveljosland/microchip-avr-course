@@ -3,7 +3,9 @@ set(adc_default_default_XC8_FILE_TYPE_assemble)
 set_source_files_properties(${adc_default_default_XC8_FILE_TYPE_assemble} PROPERTIES LANGUAGE ASM)
 set(adc_default_default_XC8_FILE_TYPE_assemblePreprocess)
 set_source_files_properties(${adc_default_default_XC8_FILE_TYPE_assemblePreprocess} PROPERTIES LANGUAGE ASM)
-set(adc_default_default_XC8_FILE_TYPE_compile "${CMAKE_CURRENT_SOURCE_DIR}/../../../main.c")
+set(adc_default_default_XC8_FILE_TYPE_compile
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../main.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../peripherals/adc.c")
 set_source_files_properties(${adc_default_default_XC8_FILE_TYPE_compile} PROPERTIES LANGUAGE C)
 set(adc_default_default_XC8_FILE_TYPE_link)
 

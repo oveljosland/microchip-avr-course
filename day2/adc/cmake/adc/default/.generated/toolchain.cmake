@@ -1,20 +1,20 @@
 # This file configures the compiler to use with CMake.
 
 set(CMAKE_C_COMPILER_WORKS YES CACHE BOOL "Tell CMake that the compiler works, but cannot be run during the configuration stage")
-set(MP_CC_DIR "/Applications/microchip/xc8/v3.00" CACHE PATH "Legacy variable from MPLAB X pointing to the compiler base directory")
-set(CMAKE_C_COMPILER "/Applications/microchip/xc8/v3.00/bin/xc8-cc" CACHE FILEPATH "Path to the compiler binary")
+set(MP_CC_DIR "/opt/microchip/xc8/v3.00" CACHE PATH "Legacy variable from MPLAB X pointing to the compiler base directory")
+set(CMAKE_C_COMPILER "/opt/microchip/xc8/v3.00/bin/xc8-cc" CACHE FILEPATH "Path to the compiler binary")
 
 set(CMAKE_ASM_COMPILER_WORKS YES CACHE BOOL "Tell CMake that the assembler works, but cannot be run during the configuration stage")
-set(CMAKE_ASM_COMPILER "/Applications/microchip/xc8/v3.00/bin/xc8-cc" CACHE FILEPATH "Path to the compiler binary.")
+set(CMAKE_ASM_COMPILER "/opt/microchip/xc8/v3.00/bin/xc8-cc" CACHE FILEPATH "Path to the compiler binary.")
 
 # Legacy variable from MPLAB X pointing to the assembler binary.
 set(MP_AS ${CMAKE_ASM_COMPILER})
 
-set(MP_LD "/Applications/microchip/xc8/v3.00/bin/xc8-cc" CACHE FILEPATH "Legacy variable from MPLAB X pointing to the linker binary.")
+set(MP_LD "/opt/microchip/xc8/v3.00/bin/xc8-cc" CACHE FILEPATH "Legacy variable from MPLAB X pointing to the linker binary.")
 
-set(MP_AR "/Applications/microchip/xc8/v3.00/bin/xc8-ar" CACHE FILEPATH "Legacy variable from MPLAB X pointing to the archiver binary.")
+set(MP_AR "/opt/microchip/xc8/v3.00/bin/xc8-ar" CACHE FILEPATH "Legacy variable from MPLAB X pointing to the archiver binary.")
 
-set(CMAKE_AR "/Applications/microchip/xc8/v3.00/bin/xc8-ar" CACHE FILEPATH "Path to the archiver binary.")
+set(CMAKE_AR "/opt/microchip/xc8/v3.00/bin/xc8-ar" CACHE FILEPATH "Path to the archiver binary.")
 
 set(CMAKE_RANLIB  CACHE FILEPATH "Do not run ranlib")
 
