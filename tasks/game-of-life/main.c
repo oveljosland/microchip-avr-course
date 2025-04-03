@@ -6,32 +6,33 @@
  */
 
 #include "display/ssd1306.h"
-#include <util/delay.h>
 #include <stdlib.h>
  
+#define SCREEN_WIDTH 64
+#define SCREEN_HEIGHT 64
+
 #define N 1
-#define M 5
- 
 #define CELL_SIZE 1 << N
-#define GRID_SIZE 32
- 
-uint8_t grid[GRID_SIZE][GRID_SIZE];
-uint8_t next[GRID_SIZE][GRID_SIZE];
+
+#define GRID_WIDTH (uint8_t)(SCREEN_WIDTH >> N)
+#define GRID_HEIGHT (uint8_t)(SCREEN_HEIGHT >> N)
+
+uint8_t grid[GRID_WIDTH][GRID_HEIGHT];
+uint8_t next[GRID_WIDTH][GRID_HEIGHT];
  
 void grid_init(void)
 {
-    for (uint8_t y = 0; y < GRID_SIZE; y++) {
-        for (uint8_t x = 0; x < GRID_SIZE; x++) {
-            grid[y][x] = rand() % 2; /* Q: is this random? Why / why not? */
+    for (uint8_t y = 0; y < GRID_HEIGHT; y++) {
+        for (uint8_t x = 0; x < GRID_WIDTH; x++) {
+            grid[y][x] = rand() % 2;
         }
     }
 }
 
 void grid_draw(void)
 {
-    SSD1306_ClearScreen();
-    for (uint8_t y = 0; y < GRID_SIZE; y++) {
-        for (uint8_t x = 0; x < GRID_SIZE; x++) {
+    for (uint8_t y = 0; y < GRID_HEIGHT; y++) {
+        for (uint8_t x = 0; x < GRID_WIDTH; x++) {
             if (grid[y][x]) {
                 for (uint8_t dy = 0; dy < CELL_SIZE; dy++) {
                     for (uint8_t dx = 0; dx < CELL_SIZE; dx++) {
@@ -41,7 +42,6 @@ void grid_draw(void)
             }
         }
     }
-    SSD1306_UpdateScreen(SSD1306_ADDR);
 }
 
 uint8_t count_neighbors(uint8_t x, uint8_t y) {
@@ -52,7 +52,7 @@ uint8_t count_neighbors(uint8_t x, uint8_t y) {
             if (dx == 0 && dy == 0) continue;
             int8_t nx = x + dx;
             int8_t ny = y + dy;
-            if (nx >= 0 && nx < GRID_SIZE && ny >= 0 && ny < GRID_SIZE) {
+            if (nx >= 0 && nx < GRID_WIDTH && ny >= 0 && ny < GRID_HEIGHT) {
                 n += grid[ny][nx];
             }
         }
@@ -61,8 +61,8 @@ uint8_t count_neighbors(uint8_t x, uint8_t y) {
 }
 
 void grid_update(void) {
-    for (uint8_t y = 0; y < GRID_SIZE; y++) {
-        for (uint8_t x = 0; x < GRID_SIZE; x++) {
+    for (uint8_t y = 0; y < GRID_HEIGHT; y++) {
+        for (uint8_t x = 0; x < GRID_WIDTH; x++) {
             uint8_t neighbors = count_neighbors(x, y);
             if (grid[y][x] && (neighbors < 2 || neighbors > 3))
                 next[y][x] = 0; /* die */
@@ -73,8 +73,8 @@ void grid_update(void) {
         }
     }
     
-    for (uint8_t y = 0; y < GRID_SIZE; y++) {
-        for (uint8_t x = 0; x < GRID_SIZE; x++) {
+    for (uint8_t y = 0; y < GRID_HEIGHT; y++) {
+        for (uint8_t x = 0; x < GRID_WIDTH; x++) {
             grid[y][x] = next[y][x];
             next[y][x] = 0; /* clear grid */
         }
@@ -89,9 +89,14 @@ int main(void)
     grid_init();
  
     while (1) {
+        SSD1306_ClearScreen();
         grid_draw();
+        SSD1306_SetPosition(65, 0);
+        SSD1306_DrawString("Test");
+        SSD1306_SetPosition(100, 0);
+        SSD1306_DrawChar('T');
+        SSD1306_UpdateScreen(SSD1306_ADDR);
         grid_update();
-       _delay_ms(50);
     }
 }
  
