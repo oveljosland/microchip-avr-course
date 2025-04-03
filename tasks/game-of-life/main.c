@@ -7,6 +7,7 @@
 
 #include "display/ssd1306.h"
 #include <stdlib.h>
+#include <util/delay.h>
  
 #define SCREEN_WIDTH 64
 #define SCREEN_HEIGHT 64
@@ -87,6 +88,17 @@ int main(void)
     SSD1306_Init(SSD1306_ADDR);
     srand(1);
     grid_init();
+
+    SSD1306_ClearScreen();
+    SSD1306_DrawLine(0, MAX_X, 15, 15);
+    SSD1306_DrawLine(0, MAX_X, 47, 47);
+    SSD1306_SetPosition(32, 3);
+    SSD1306_DrawString("Conway's");
+    SSD1306_SetPosition(7, 4);
+    SSD1306_DrawString("Game of Life");
+    SSD1306_UpdateScreen(SSD1306_ADDR);
+    _delay_ms(10000);
+
  
     while (1) {
         SSD1306_ClearScreen();
