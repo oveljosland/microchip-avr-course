@@ -58,7 +58,7 @@ Alternatively, you can download the repository as a `.ZIP` file and extract it t
 ## Acknowledgments
 This project uses the following open-source libraries:
 
-- [SSD1306 OLED Driver](https://github.com/Matiasus/SSD1306) by **Marián Hrinko** – Licensed under the **MIT License**.
+- [SSD1306 OLED Driver](https://github.com/Matiasus/SSD1306) by **Marián** – Licensed under the **MIT License**.
 - [kissFFT](https://github.com/mborgerding/kissfft) by **Mark Borgerding** – Licensed under the **BSD-3-Clause License**.
 
 For more details, see the [`THIRD_PARTY_LICENSES`](THIRD_PARTY_LICENSES) file.
