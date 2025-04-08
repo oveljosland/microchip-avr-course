@@ -1,0 +1,4 @@
+C:/Users/amund/MPLABProjects/timer/_build/timer/default/CMakeFiles/timer_default_default_XC8_compile.dir
+C:/Users/amund/MPLABProjects/timer/_build/timer/default/CMakeFiles/timer_default_default.elf.dir
+C:/Users/amund/MPLABProjects/timer/_build/timer/default/CMakeFiles/edit_cache.dir
+C:/Users/amund/MPLABProjects/timer/_build/timer/default/CMakeFiles/rebuild_cache.dir
