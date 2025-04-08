@@ -81,6 +81,8 @@ funclist
 nbproject/Makefile-*
 disassembly/
 .generated_files/
+cmake
+_build
 
 # macOS
 .DS_Store

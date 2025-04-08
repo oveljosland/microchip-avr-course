@@ -1,8 +1,0 @@
-[
-{
-  "directory": "C:/Users/amund/MPLABProjects/task1/_build/task1/default",
-  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v3.00\\bin\\xc8-cc.exe -DXPRJ_default=default -D__AVR128DB48__ -c -mcpu=AVR128DB48 -x c -mdfp=C:/Users/amund/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8 -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -gdwarf-3 -mno-const-data-in-progmem -o CMakeFiles\\task1_default_default_XC8_compile.dir\\C_\\Users\\amund\\MPLABProjects\\task1\\main.c.o -c C:\\Users\\amund\\MPLABProjects\\task1\\main.c",
-  "file": "C:\\Users\\amund\\MPLABProjects\\task1\\main.c",
-  "output": "CMakeFiles\\task1_default_default_XC8_compile.dir\\C_\\Users\\amund\\MPLABProjects\\task1\\main.c.o"
-}
-]
