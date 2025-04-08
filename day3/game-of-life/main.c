@@ -2,13 +2,14 @@
  * @file main.c
  * @author ove
  * @date 2025-04-03
- * @brief conway's game of life 
+ * @brief conway's game of life (solution)
  */
 
 #include "display/ssd1306.h"
 #include <stdlib.h>
 #include <util/delay.h>
  
+//#define SCREEN_WIDTH 128 /* only works on half of the display for some reason */
 #define SCREEN_WIDTH 64
 #define SCREEN_HEIGHT 64
 
