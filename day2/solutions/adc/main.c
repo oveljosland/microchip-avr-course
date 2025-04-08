@@ -2,7 +2,7 @@
 * @file main.c
 * @author oveljosland
 * @date 2025-04-02
-* @brief use the adc to sample sensor data 
+* @brief sample potentiometer values with adc and print to display 
 */
 
 #define F_CPU 24000000UL
@@ -12,23 +12,15 @@
 #include "peripherals/adc/adc.h"
 #include "display/ssd1306.h"
 
-
 int main(void)
 {
     SSD1306_Init(SSD1306_ADDR);
     SSD1306_ClearScreen();
+    adc_init();
+
     uint8_t value = 0;
 
-    /* TODO: finish the adc_init() function in the 'peripherals' folder */
-    /* TODO: (optional) initialize other sensors */
-
     while (1) {
-        /* read from adc */
-        value = adc_read();
-        /* tip: try mapping the adc readings to the LEDs or OLED display */
-
-        /* hint: take a look at the datasheet and the hardware user guide */
-        
         SSD1306_ClearScreen();
         for (uint8_t i = 0; i < MAX_X; i++) {     
             value = adc_read();
@@ -38,3 +30,4 @@ int main(void)
     }    
     return 0;
 };
+
