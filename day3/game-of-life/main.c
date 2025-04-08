@@ -1,11 +1,12 @@
 /** 
- * @file main.c
- * @author ove
- * @date 2025-04-03
- * @brief conway's game of life (solution)
- */
+* @file main.c
+* @author ove
+* @date 2025-04-03
+* @brief conway's game of life (solution)
+*/
 
 #include "display/ssd1306.h"
+#include "peripherals/adc/adc.h"
 #include <stdlib.h>
 #include <util/delay.h>
  
@@ -87,7 +88,8 @@ void grid_update(void) {
 int main(void)
 {
     SSD1306_Init(SSD1306_ADDR);
-    srand(1); 
+    adc_init();
+    srand(adc_read()); /* seed the random machine with adc sample */
     grid_init();
 
     SSD1306_ClearScreen();
