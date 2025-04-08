@@ -1,4 +1,0 @@
-C:/Users/amund/MPLABProjects/task1/_build/task1/default/CMakeFiles/task1_default_default_XC8_compile.dir
-C:/Users/amund/MPLABProjects/task1/_build/task1/default/CMakeFiles/task1_default_default.elf.dir
-C:/Users/amund/MPLABProjects/task1/_build/task1/default/CMakeFiles/edit_cache.dir
-C:/Users/amund/MPLABProjects/task1/_build/task1/default/CMakeFiles/rebuild_cache.dir
