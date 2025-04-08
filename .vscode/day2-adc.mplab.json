@@ -3,9 +3,9 @@
     "configurations": [
         {
             "name": "default",
-            "id": "conf1",
+            "id": "",
             "targetDevice": "AVR128DB48",
-            "imagePath": "./out/debounce/default.elf",
+            "imagePath": "./out/adc/default.elf",
             "packs": [
                 {
                     "name": "AVR-Dx_DFP",
@@ -22,15 +22,16 @@
             "name": "default-XC8",
             "type": "toolchain",
             "provider": "microchip.toolchains:xc8@3.00",
-            "properties": {}
-        }
+            "properties": {
+            }
+        }   
     ],
     "fileSets": [
         {
             "name": "default",
             "files": [
                 {
-                    "include": "**/*",
+                    "include": "**/day2/adc/**/*",
                     "exclude": "**/(_build|out|cmake|.vscode)/**/*"
                 }
             ]

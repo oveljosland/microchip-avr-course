@@ -3,9 +3,9 @@
     "configurations": [
         {
             "name": "default",
-            "id": "conf1",
+            "id": "",
             "targetDevice": "AVR128DB48",
-            "imagePath": "./out/button/default.elf",
+            "imagePath": "./out/debounce/default.elf",
             "packs": [
                 {
                     "name": "AVR-Dx_DFP",
@@ -30,7 +30,7 @@
             "name": "default",
             "files": [
                 {
-                    "include": "**/*",
+                    "include": "**/day1/debounce/**/*",
                     "exclude": "**/(_build|out|cmake|.vscode)/**/*"
                 }
             ]

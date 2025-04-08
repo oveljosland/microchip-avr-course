@@ -3,9 +3,9 @@
     "configurations": [
         {
             "name": "default",
-            "id": "conf1",
+            "id": "",
             "targetDevice": "AVR128DB48",
-            "imagePath": "./out/adc/default.elf",
+            "imagePath": "./out/game-of-life/default.elf",
             "packs": [
                 {
                     "name": "AVR-Dx_DFP",
@@ -30,7 +30,7 @@
             "name": "default",
             "files": [
                 {
-                    "include": "**/*",
+                    "include": "**/tasks/game-of-life/**/*",
                     "exclude": "**/(_build|out|cmake|.vscode)/**/*"
                 }
             ]

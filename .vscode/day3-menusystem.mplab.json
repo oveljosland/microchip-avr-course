@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "default",
-            "id": "conf1",
+            "id": "",
             "targetDevice": "AVR128DB48",
             "imagePath": "./out/menusystem/default.elf",
             "packs": [
@@ -30,7 +30,7 @@
             "name": "default",
             "files": [
                 {
-                    "include": "**/*",
+                    "include": "**/tasks/menusystem/**/*",
                     "exclude": "**/(_build|out|cmake|.vscode)/**/*"
                 }
             ]

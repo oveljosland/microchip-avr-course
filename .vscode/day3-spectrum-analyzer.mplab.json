@@ -3,9 +3,9 @@
     "configurations": [
         {
             "name": "default",
-            "id": "conf1",
+            "id": "",
             "targetDevice": "AVR128DB48",
-            "imagePath": "./out/game-of-life/default.elf",
+            "imagePath": "./out/spectrum-analyzer/default.elf",
             "packs": [
                 {
                     "name": "AVR-Dx_DFP",
@@ -30,7 +30,7 @@
             "name": "default",
             "files": [
                 {
-                    "include": "**/*",
+                    "include": "**/tasks/spectrum-analyzer/**/*",
                     "exclude": "**/(_build|out|cmake|.vscode)/**/*"
                 }
             ]
