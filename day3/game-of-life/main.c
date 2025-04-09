@@ -37,7 +37,7 @@
 *       current time is usually a good idea, however, since the microcontroller has no
 *       concept of time, we have to figure out something else.
 *       
-*       hint: noise.
+*       hint: "I can't hear you over all this NOISE!".
 *       
 *       Look for these lines:
 *           uint16_t seed = 0;
