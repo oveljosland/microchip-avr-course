@@ -5,6 +5,8 @@
 * @brief conway's game of life (solution)
 */
 
+#define F_CPU 24000000UL
+
 #include "display/ssd1306.h"
 #include "peripherals/adc/adc.h"
 #include <stdlib.h>

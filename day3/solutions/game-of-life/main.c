@@ -1,9 +1,11 @@
 /** 
- * @file main.c
- * @author ove
- * @date 2025-04-03
- * @brief conway's game of life 
- */
+* @file main.c
+* @author ove
+* @date 2025-04-03
+* @brief conway's game of life 
+*/
+
+#define F_CPU 24000000UL
 
 #include "display/ssd1306.h"
 #include <stdlib.h>
