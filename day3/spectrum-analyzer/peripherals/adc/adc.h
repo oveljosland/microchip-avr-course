@@ -1,6 +1,6 @@
 /** 
  * @file adc.h
- * @author Ove Ljosland
+ * @author oveljosland
  * @date 2025-03-19
 */
 

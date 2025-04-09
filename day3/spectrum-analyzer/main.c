@@ -5,6 +5,26 @@
  * @brief spectrum analyzer using kissFFT and SSD1306 OLED display
 */
 
+/**
+* INFO: This program computes the Fast Fourier Transform (FFT) of
+* the samples from the ADC. In this task you will configure the ADC
+* to sample audio from the microphone on the Explorer board, and print
+* the power spectrum to the display.
+* 
+* TODO:
+* 1. Finish the 'adc_init' function in 'peripherals/adc/adc.c'
+*
+* 2. Figure out how to print to the display.
+*
+* 3. Test the program by using your voice or find a 'frequency sweep' video on YouTube
+*    and point your phone speakers to the mic on the Explorer board. When running the
+*    frequency sweep, you should observe a frequency component moving upward on the
+*    horizontal axis of the spectrum.
+*
+* 4. Extra: try changing the sampling period T_SAMPLE to see the effects of aliasing.
+*
+*/
+
 /* --- header files --- */
 #include <xc.h>
 #include <math.h>
@@ -32,7 +52,7 @@
 
 /* --- constants --- */
 #define N 8
-#define NFFT 1<<N /* fft length */
+#define NFFT 1<<N /* FFT block length */
 
 /* try changing the sampling period to see the effects of aliasing */
 #define T_SAMPLE 125 /* microseconds */
@@ -114,8 +134,9 @@ int main(void)
 
             pwr_bs = (uint8_t) pwr >> 2;
 
-            /* TODO: plot 'pwr_bs' on the display */
-            SSD1306_DrawLine(n, n, MAX_Y, MAX_Y - pwr_bs);
+            /** TODO: plot 'pwr_bs' on the display. */
+            /* hint: take a look at the header file 'display/ssd1306.h'. */
+            SSD1306_DrawLine(n, n, /* y0 */, /* y1 */); 
         }
         SSD1306_UpdateScreen(SSD1306_ADDR);
     }
