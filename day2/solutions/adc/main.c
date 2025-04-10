@@ -8,12 +8,16 @@
 #define F_CPU 24000000UL
 
 #include <avr/io.h>
-#include <stdlib.h>
+#include <avr/xmega.h>
+#include <stdint.h>
+
 #include "peripherals/adc/adc.h"
 #include "display/ssd1306.h"
 
 int main(void)
 {
+    _PROTECTED_WRITE(CLKCTRL.OSCHFCTRLA, CLKCTRL_FRQSEL_24M_gc); // Set clock to 24MHz
+
     SSD1306_Init(SSD1306_ADDR);
     SSD1306_ClearScreen();
     adc_init();
