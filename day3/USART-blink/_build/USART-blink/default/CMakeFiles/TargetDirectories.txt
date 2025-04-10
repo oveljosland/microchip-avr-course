@@ -1,0 +1,4 @@
+C:/Users/amund/MPLABProjects/USART-blink/_build/USART-blink/default/CMakeFiles/USART_blink_default_default_XC8_compile.dir
+C:/Users/amund/MPLABProjects/USART-blink/_build/USART-blink/default/CMakeFiles/USART_blink_default_default.elf.dir
+C:/Users/amund/MPLABProjects/USART-blink/_build/USART-blink/default/CMakeFiles/edit_cache.dir
+C:/Users/amund/MPLABProjects/USART-blink/_build/USART-blink/default/CMakeFiles/rebuild_cache.dir

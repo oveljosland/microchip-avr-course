@@ -1,0 +1,4 @@
+C:/Users/amund/MPLABProjects/USART-ADC-LF/_build/USART-ADC-LF/default/CMakeFiles/USART_ADC_LF_default_default_XC8_compile.dir
+C:/Users/amund/MPLABProjects/USART-ADC-LF/_build/USART-ADC-LF/default/CMakeFiles/USART_ADC_LF_default_default.elf.dir
+C:/Users/amund/MPLABProjects/USART-ADC-LF/_build/USART-ADC-LF/default/CMakeFiles/edit_cache.dir
+C:/Users/amund/MPLABProjects/USART-ADC-LF/_build/USART-ADC-LF/default/CMakeFiles/rebuild_cache.dir
