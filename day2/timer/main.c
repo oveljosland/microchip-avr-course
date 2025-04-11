@@ -15,9 +15,9 @@
  
  
  int main(void) {
-     // STEP 2: Set both LEDs as output (hint: dirset)
+     // STEP 2: Set both LEDs as output (hint: DIRSET)
     
-     // STEP 3: Set the first LED as high (hint: portset)
+     // STEP 3: Set the first LED as high (hint: OUTSET)
      // Toggle the first LED. Just so that we get that the first LED will be off
      // when the second is on and vice versa
  
